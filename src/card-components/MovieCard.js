@@ -31,9 +31,11 @@ export default class MovieCard extends Component {
 
   render() {
     return (
-      <div className="movie-card">
-        <CardFront poster={this.props.poster}/>
-        <CardBack genres={this.props.genres} title={this.props.title} IMDBRating={this.props.IMDBRating}/>
+      <div>
+        <CardFront poster={data.poster}/>
+        <CardBack title={data.title}
+        IMDBRating={data.IMDBRating}
+        genres={data.genres}/>
       </div>
     )
   }
@@ -42,6 +44,7 @@ export default class MovieCard extends Component {
 MovieCard.defaultProps = {
   title: "Unknown",
   IMDBRating: null,
-  genres: ["No Genre(s) Found"],
+  genres: ['No Genre(s) Found'],
   poster: "default"
 }
+
